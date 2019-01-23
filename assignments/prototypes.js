@@ -33,8 +33,8 @@ GameObject.prototype.destroy = function() {
 */
 
 function CharacterStats(charAtt) {
-  this.healthPoints = healthPoints
-  this.name = name;
+  this.healthPoints = charAtt.healthPoints;
+  this.name = charAtt.name;
 }
 
 CharacterStats.prototype.takeDamage = function() {
@@ -52,10 +52,10 @@ CharacterStats.prototype.takeDamage = function() {
   * should inherit takeDamage() from CharacterStats
 */
 
-function Humanoid() {
-  this.team 
-  this.weapons 
-  this.language
+function Humanoid(humanoidAtt) {
+  this.team = humanoidAtt.team;
+  this.weapons = humanoidAtt.weapons;
+  this.language = humanoidAtt.language;
 }
 
 Humanoid.prototype.greet = function() {
